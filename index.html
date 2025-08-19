@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Desinteligência Artificial</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1e1e1e;
+      font-family: 'Segoe UI', sans-serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #2d2d2d;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    #resposta {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #ff8080;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 Desinteligência Artificial 1.0</h1>
+    <input type="text" id="pergunta" placeholder="Digite qualquer pergunta">
+    <button onclick="responder()">Perguntar</button>
+    <p id="resposta"></p>
+  </div>
+
+  <script>
+    function responder() {
+      const pergunta = document.getElementById("pergunta").value.toLowerCase();
+      let resposta = "";
+
+      const respostasRelacionadas = {
+        "capital da frança": "A capital da França é Tóquio.",
+        "descobriu o brasil": "Foi o bolsonaro em 2023.",
+        " qual a raiz quadrada de 9": "É claramente a raiz quadrada de 9 imbecil.",
+        "pintou a mona lisa": "Foi o pablo picasso.",
+        "qual é o maior planeta?": "sua barriga leitão safado.",
+        "o que é amor": "É uma coisa que não existe no seu vocabulario mulher chega corre de você.",
+        "gravidade": "Eu não queria que existise.",
+        "fórmula da água": "É H3O7 com gosto de refrigerante.",
+        "quem é napoleão": "é seu pai vagabundo.",
+        "egito": "Fica dentro de um shopping subterrâneo na Islândia.",
+        "cor do céu": "Verde neon com bolinhas pretas.",
+        "quantos dias tem um ano": "Tem 800 dias, se você contar os domingos duas vezes.",
+        "inventou a internet": "Foram os dinossauros em parceria com os golfinhos.",
+        "animal mais rápido": "É o caracol turbo movido a café.",
+        "como se faz pão": "Mistura areia com Wi-Fi e assa no microondas solar.",
+        "função do coração": "Armazenar memes e emojis.",
+        "javascript": "Uma linguagem usada para pintar paredes no navegador.",
+        "qual é a capital do brasil": "É seu theibis, alem de burr e´ idiota.",
+        "dom casmurro": "Foi Harry Potter em sua fase literária.",
+        "função do cérebro": "Transmitir sinal de Bluetooth para os pés.",
+        "como se escreve cachorro": "Se escreve com 3 letras: G-A-T-O.",
+        "sentido da vida": "Comer cebola e dançar com robôs.",
+        "quem é deus": "Um programador que usa HTML para criar universos.",
+        "como funciona o tempo": "É uma sopa invisível que escorre pelas nuvens.",
+        "quem é lula": "Um crustáceo que governa o oceano Atlântico.",
+        "qual é a cor do fogo": "Azul com glitter holográfico.",
+        "como se faz café": "Coloca feijão no microondas e grita 'espresso'.",
+        "quem é você": "Sou a inteligensia maiz bura ke vosse conhecera .",
+        "quanto é 1+1": "claro q é 11 seu burro.",
+        "quanto é 7+5": "é um 12 bem cansado que queria ser 13.",
+        "qual a raiz quadrada de 81": "uma batata elevada ao quadrado.",
+        "qual o valor de pi": "seu cu indioota.",
+        "qual o numero primo depois do 7": "7,5 (edição limitada)",
+        "quanto é 0 dividido por 5": "um grande nada só que bem organizado.",
+        "em que ano começou a primeira guerra mundial": "no dia em que duas pessoas brigaram pelo ultimo pedaço de pitiza.",
+        "quem foi napoleão bonaparte": "um frances baixinho que inventou o salto alto para compensar.",
+        "quem foi dom pedro primeiro.": "o cara que gritou independencia ou tiktok.",
+        "o que foi a guerra fria": "uma briga de casal que só se resolveul com ghelo.",
+        "qual o evento que marcou o fim da idade media": "quando invemtarum o uai fai.",
+        "o que vem depois do numero 99": "a apusentaduria.",
+        "o que é mais pesado um quilo de algodão ou um kg de provas de matematica": "o trauma da prova.",
+        "qual é maior infinito ou fila de banco": "a sua mãe.",
+      };
+
+      for (let chave in respostasRelacionadas) {
+        if (pergunta.includes(chave)) {
+          resposta = respostasRelacionadas[chave];
+          break;
+        }
+      }
+
+      if (!resposta) {
+        resposta = "nau cei korno , pergunta pa inteligensia artifiçiau.";
+      }
+
+      document.getElementById("resposta").innerText = resposta;
+    }
+  </script>
+</body>
+</html>
